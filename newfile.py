@@ -92,7 +92,11 @@ def check_cards_from_file(message, cards):
 
             email = generate_email()
             card = f"{cc}|{mes}|{ano}|{cvv}"
-
+print("Sending request...")
+print("Headers:", headers)
+print("Data:", data)
+print("Response:", r.status_code)
+print("Body:", r.text)
             url = "https://api.stripe.com/v1/payment_methods"
             data = {
                 "orderDetails": {
